@@ -10,15 +10,16 @@ set_policy("build.c++.modules", true)
 
 add_rules("plugin.compile_commands.autoupdate", { outputdir = "./." })
 
+add_requires("mimalloc")
+
 target("jit_calc")
     set_kind("binary")
 
-    add_cxxflags("-fuse-ld=mold")
-
-    add_links("mimalloc")
-    add_linkdirs("/home/lan/mimalloc/build")
+    add_cxxflags("-fuse-ld=mold") -- 使用并行链接器替换
 
     add_files("src/*.cpp")
+
+    add_packages("mimalloc")
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
