@@ -1,0 +1,6 @@
+[
+{
+  "directory": "/home/lan/test/jit_calc",
+  "arguments": ["/usr/local/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-O3", "-march=native", "-std=c++26", "-fuse-ld=mold", "-fmodules", "-D_GLIBCXX_USE_CXX11_ABI=0", "-DNDEBUG", "-o", "build/.objs/jit_calc/linux/x86_64/release/src/jit_calc.cpp.o", "src/jit_calc.cpp"],
+  "file": "src/jit_calc.cpp"
+}]
